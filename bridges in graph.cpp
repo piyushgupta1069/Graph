@@ -19,7 +19,7 @@ void dfs(int node, int &time)
                 bridges.push_back({node,child});
             }
         }else if(child!=par[node]){
-            low[node]=min(low[node],disc[child]);
+            low[node]=min(low[node],low[child]);
         }
     }
 }
